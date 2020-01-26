@@ -1,0 +1,32 @@
+.login-container {
+  background: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  mat-card {
+    width: 80%;
+  }
+
+  mat-form-field {
+    width:100%;
+  }
+
+  button {
+    width: 100%;
+  }
+  .login-error {
+    padding: 5px;
+    margin: 10px 0;
+    background: #f1d0d0;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .login-container {
+    mat-card {
+      width: 50%;
+    }
+  }
+}

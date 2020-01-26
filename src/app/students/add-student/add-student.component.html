@@ -1,0 +1,28 @@
+<div>
+<h2 mat-dialog-title>Add Student</h2>
+<mat-dialog-content  class="student-form">
+   <form  [formGroup]="studentForm">
+     <mat-form-field>
+       <input matInput placeholder="Name" formControlName="name">
+     </mat-form-field>
+
+     <mat-form-field>
+      <input matInput placeholder="Roll No" formControlName="roll_no">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Degree" formControlName="degree">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="City" formControlName="city">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button (click)="addStudent()" *ngIf="action=='add'">Save</button>
+  <button mat-button (click)="updateStudent()" *ngIf="action=='edit'">Update</button>
+</mat-dialog-actions>
+
+</div>

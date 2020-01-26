@@ -1,0 +1,28 @@
+<div class="login-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="login-error" *ngIf="loginError">
+
+          {{loginError}}
+        </div>
+        <form [formGroup]="loginForm" *ngIf="loginForm">
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Passsword" type="password" formControlName="password">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="login()">Login</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
+
+
+
+

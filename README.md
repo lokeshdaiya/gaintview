@@ -1,27 +1,57 @@
-# Giantview
+# ABC Engineering college
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+# Server
 
-## Development server
+Server code resides in `server` folder which is based on `NodeJS` and `mongodb`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Connection string
+You can update in `server/index.js`.
 
-## Code scaffolding
+### Port
+Server runs on port **3000**. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### API paths
+There are two api paths.
 
-## Build
+`api/user`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`api/students`
 
-## Running unit tests
+# Fronted
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Fronted is developd using Angular
 
-## Running end-to-end tests
+It has login page and student module which is lazily loaded based on authentication.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Run application
+
+1. Clone this repository 
+2. Run `npm install` command in root folder and in `server` folder
+3. Run `npm start` in root folder to start Fronted application
+4. Run `npm start` in `server` folder to start backend 
+
+
+# Add Clerk
+
+You can find `add-clerk.js` file run below command to add clerk.
+
+  `cd server`
+
+  `node add-clerk.js`
+
+
+ Make sure you run it once. If you want to add different user then please changes the values.
+
+
+ # Preview
+
+  ## Login
+
+  <img src="login.png">
+
+  ## Students
+
+  <img src="students.png">
+
